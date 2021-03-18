@@ -50,24 +50,24 @@ export default function NewIncident() {
 
           <Link className="back-link" to="/profile">
             <FiArrowLeft size={16} color="#e02041" />
-            Voltar para home
+            Voltar
           </Link>
         </section>
 
         <form onSubmit={handleNewIncident}>
-          <input 
+          <input
             placeholder="Título do caso"
             value={title}
             onChange={e => setTitle(e.target.value)}
           />
 
-          <textarea 
+          <textarea
             placeholder="Descrição"
             value={description}
             onChange={e => setDescription(e.target.value)}
           />
 
-          <input 
+          <input
             placeholder="Valor em reais"
             value={value}
             onChange={e => setValue(e.target.value)}

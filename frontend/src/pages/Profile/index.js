@@ -12,7 +12,7 @@ export default function Profile() {
   const [incidents, setIncidents] = useState([]);
 
   const history = useHistory();
-  
+
   const ongId = localStorage.getItem('ongId');
   const ongName = localStorage.getItem('ongName');
 
@@ -51,7 +51,7 @@ export default function Profile() {
     <div className="profile-container">
       <header>
         <img src={LogoImg} alt="Be The Hero" />
-        <span>Bem vinda, {ongName}</span>
+        <span>Boas Vindas, {ongName}</span>
 
         <Link className="button" to="/incidents/new">Cadastrar novo caso</Link>
         <button onClick={handleLogout} type="button">
@@ -69,7 +69,7 @@ export default function Profile() {
 
             <strong>DESCRIÇÃO:</strong>
             <p>{incident.description}</p>
-                  
+
             <strong>VALOR:</strong>
             <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}</p>
 

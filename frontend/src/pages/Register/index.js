@@ -26,10 +26,10 @@ export default function Register() {
       city,
       uf,
     };
-    
+
     try {
       const response = await api.post('ongs', data)
-      
+
       alert(`Seu ID de acesso: ${response.data.id}`);
 
       history.push('/');
@@ -49,36 +49,36 @@ export default function Register() {
 
           <Link className="back-link" to="/">
             <FiArrowLeft size={16} color="#e02041" />
-            Não tenho cadastro
+            Já tenho cadastro
           </Link>
         </section>
 
         <form onSubmit={handleRegister}>
-          <input 
+          <input
             placeholder="Nome da ONG"
             value={name}
             onChange={e => setName(e.target.value)}
           />
-          <input 
-            type="email" 
+          <input
+            type="email"
             placeholder="E-mail"
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
-          <input 
+          <input
             placeholder="WhatsApp"
             value={whatsapp}
             onChange={e => setWhatsapp(e.target.value)}
           />
 
           <div className="input-group">
-            <input 
+            <input
               placeholder="Cidade"
               value={city}
               onChange={e => setCity(e.target.value)}
             />
-            <input 
-              placeholder="UF" 
+            <input
+              placeholder="UF"
               style={{ width: 80 }}
               value={uf}
               onChange={e => setUf(e.target.value)}
